@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+	<head>
+		<title>ChrisJones</title>
+	    <!-- <link rel="icon" href="demo_icon.jpg" type="image/jpg" sizes="16x16"> -->
+	    <meta charset="utf-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Barlow:400,700,800|Work+Sans:800" rel="stylesheet">
+
+		<style>
+		
+/*colors used:
+dark green:  #2f4f4f
+lime green:  #32cd32*/
+
+	* {
+	    box-sizing: border-box;
+	}
+
+	body {
+		background-color: #2f4f4f;  
+	}
+
+	body {
+	@media(min-width: 600px){
+		padding: 30px;
+	}
+}
+
+	p {
+		color: white;
+		font-family: 'Barlow', sans-serif;
+		text-align: left;
+		line-height: 7px;
+		letter-spacing: 2px;
+		font-size: 12px;
+	}
+
+	#name-stack p  {
+		text-align: right;
+		letter-spacing: 6px;
+	}
+
+	.para1 p {
+		letter-spacing: 1px;
+		line-height: 22px;
+		text-align: left;
+		font-size: 14px;
+		padding-right: 30px;
+		/*display: none;*/
+	}
+
+	span {
+		color: #32cd32;
+	}
+
+	a {
+		text-decoration: none;
+		font-size: 14px;
+	}
+
+	li:hover {
+		border-bottom: 6px solid #32cd32;
+	}
+
+	li {
+		display: inline-block;
+		text-transform: uppercase;
+		/*letter-spacing: 3px;*/
+		margin-right: 30px;
+
+	}
+
+	nav {
+		/*width: 100px;*/
+    	height: 34px;
+    	position: fixed;
+    	background-color: #32cd32;
+    	top: 76px;
+    	right: 0px;
+    	z-index: 98;
+    	margin-right: -3px;
+    	padding-top: 5px;
+    	padding-right: 80px;
+    	padding-left: 10px;
+	}
+
+	#braces {
+		font-family: 'Work Sans', sans-serif;
+		font-size: 60px;
+		margin-left: 10px; 
+		position: relative;
+		top: -29px;
+		line-height: 0px;
+	}
+
+	/*#name-stack {
+		display: inline-block;
+	}*/
+
+	a > span {
+		letter-spacing: 3px;
+	}
+
+	.portfolio-item {
+		/*display: inline-block;*/
+		width: 300px;
+		margin: 10px 2px;
+	}
+
+	.portfolio-window {
+		height: auto;
+		margin-bottom: 10px;
+	}
+
+	.p-portfolio > p {
+		text-align: left;
+		text-transform: uppercase;
+		line-height: 1.5;
+	}
+
+	.p-portfolio-change > p {
+		color: #32cd32;
+		font-weight: 700;
+	}
+
+	.container {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: center;
+		width: 90%;
+   		margin-left: auto;
+    	margin-right: auto;
+    	/*padding-top: 150px;*/
+
+	}
+
+	.header-container {
+		width: 100%;
+		height: 85px;
+		background-color: #2f4f4f; 
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-content: center;
+		position: fixed;
+		z-index: 100;
+		margin-left: -8px;
+    	margin-top: -8px;
+    	padding: 6px;
+}
+
+	/*.portfolio-window:nth-child(2) {
+		margin: 0px 20px;
+	}*/
+
+	.portfolio-link p {
+		background-color: white;
+		color: #32cd32;
+		width: 32px;
+		padding: 0px 10px;
+		font-weight: 700;
+}
+
+
+	.github-link p {
+		width: 86px;
+		background-color: #32cd32;
+		color: white;
+		padding: 0px 10px;
+		font-weight: 700;
+	}
+
+	figure {
+		margin: none;
+		filter: grayscale(100%);
+	}
+
+	img {
+		filter: grayscale(100%);
+	}
+
+	img:hover {
+		filter: none;
+	}
+
+
+	.page-two {
+		/*width: 100%;*/
+		display: flex;
+		justify-content: flex-center;
+		flex-direction: row;
+		height: auto;
+		background-color: white;
+		margin: 8px -8px 55px -8px;
+		/*margin-right: -8px;
+		margin-left: -8px;*/
+		padding: 122px 60px 30px 30px;
+	}
+
+	p#page-2 {
+		color: black;
+		text-align: left; 
+		line-height: 1.5;
+		letter-spacing: 1px;
+		font-size: 13px;
+
+	}
+
+	/*section {
+		position: absolute;
+		left: 10%;
+	}*/
+
+	.inner {
+		position: relative;
+		left: 10%;
+	}
+	h1 {
+		color: black;
+		text-transform: uppercase;
+		font-family: 'Barlow', sans-serif;
+		text-align: left;
+		line-height: 7px;
+		letter-spacing: 4px;
+		font-size: 14px;
+	}
+
+	.about-me-link p {
+		width: 86px;
+		background-color: white;
+		color: #32cd32;
+		padding: 0px 10px;
+		font-weight: 700;
+		line-height: 22px;
+   	 	letter-spacing: 1px;
+   	 	border: 1px solid gray;
+   	 	font-size: 14px;
+   	 	z-index: 99;
+	}
+
+	#a-m-l-1.about-me-link p {
+		position: relative;
+		left: 20px;
+	}
+
+	#a-m-l-2.about-me-link p {
+		position: relative;
+		left: 3px;
+	}
+
+	#a-m-l-3.about-me-link p {
+		position: relative;
+		left: 20px;
+	}
+
+	.h1-rule-below {
+		border-bottom:  6px solid #32cd32;
+		margin-bottom: 21px;
+		width: 94px;
+	}
+
+	#me {
+		max-width: 220px;
+		float: right;
+		/*z-index: 0;*/
+		/*display: inline-block;*/
+		position: relative;
+    	bottom: 105px;	
+    	right: 5%;
+    	object-fit: cover;
+    }
+
+    
+
+</style>
+	</head>
+
+<body>
+	<div class="header-container">
+		<div id="name-stack">
+			<p>CHRIS JONES</p>
+			<p><span>FULL-STACK</span></p>
+			<p><span>WEB DEVELOPER</span></p>
+		</div>
+		<div>
+				<p id="braces">{<span>}</span></p>
+		</div>
+	</div>
+	<nav>
+		<a href="#portfolio"><p>PORTFOLIO</p></a>
+	</nav>
+
+	<div class="page-two">
+		<div class="inner">
+			<section>
+				<h1>About me</h1>
+				<div class="h1-rule-below"></div>
+				<p id="page-2">Proin id diam gravida ligula eleifend dictum at eget turpis. Integer lobortis cursus quam, eu aliquet purus ullamcorper eu. Donec malesuada tortor eget odio cursus rutrum. Nunc lobortis feugiat ultricies. Curabitur feugiat nunc eget porta pharetra. Sed mattis dui elementum suscipit eleifend. Proin nec vestibulum nisi, nec ullamcorper sem. Maecenas ante sapien, auctor vitae suscipit eget, posuere a velit. In tincidunt sit amet augue ut sollicitudin. Suspendisse potenti. Maecenas aliquet libero sed nibh condimentum, ac facilisis ipsum faucibus.</p>
+
+				
+
+				<a class="about-me-link" id="a-m-l-1" href="#" target="_blank"><p>CV</p></a>
+				<a class="about-me-link" id="a-m-l-2" href="#" target="_blank"><p>LinkedIn</p></a>
+				<a class="about-me-link" id="a-m-l-3" href="#" target="_blank"><p>GitHub</p></a>
+				<img id="me" src="img/chris_j.jpg" alt="A portrait of myself" width="75%">
+			</section>
+		</div>
+		
+	</div>
+
+	<!-- anchor fronm nav -->
+
+	<div> spacer not always visible</div>
+	<a id="portfolio"></a> 
+
+	<div class="container">
+
+
+
+	<!-- portfolio item one ************************************* -->
+
+		<div class="portfolio-item">
+			<div class="portfolio-window">
+				<img src="img/Adrien-on-Unsplash.jpg" alt="BBF 2018 website link" width="100%">
+			</div>
+			<div class="p-portfolio"><p>Bristol Balloon Fiesta</p></div>
+			<div class='para1'>
+				<p>A static yet fully-responsive front-end project utilising HTML, CSS, bootstrap, jQuery and Angular JS. It is my front-end project piece completed as part of my course.</p>
+				<a class="portfolio-link" href="https://jones-cd.github.io/s1-project/" target="_blank"><p>LINK</p></a>
+				<a  class="github-link" href="https://github.com/jones-cd/s1-project" target="_blank"><p>GitHub repo</p></a>
+			</div>
+		</div>
+
+	<!-- portfolio item two ************************************* -->
+
+		<div class="portfolio-item">
+			<div class="portfolio-window">
+				<img src="img/NordWood-Themes-on-Unsplash.jpg" alt="BBF 2018 website link" width="100%">
+			</div>
+			<div class="p-portfolio"><p>Data dashboard</p></div>
+			<div class='para1'>
+				<p>A data-driven project utilising Crossfilter, D3.js, DC.js, MongoDB etc...</p> 
+				<a class="portfolio-link" href="#" target="_blank"><p>LINK</p></a>
+				<a  class="github-link" href="https://github.com/badgerboy99/s1-project" target="_blank"><p>GitHub repo</p></a>
+			</div>
+		</div>
+
+	<!-- portfolio item three ************************************* -->
+
+		<div class="portfolio-item">
+			<div class="portfolio-window">
+				<img src="img/Lukas-Blazek-on-Unsplash.jpg" alt="BBF 2018 website link" width="100%">
+			</div>
+			<div class="p-portfolio"><p>full-stack</p></div>
+			<div class='para1'>
+				<p>This full-stack project .....Django</p> 
+				<a class="portfolio-link" href="#" target="_blank"><p>LINK</p></a>
+				<a  class="github-link" href="https://github.com/badgerboy99/s1-project" target="_blank"><p>GitHub repo</p></a>
+			</div>
+		</div>
+
+		
+	</div>	
+
+
+
+
+
+	<!-- ******** page two ********************************************* -->
+
+	
+
+
+
+	<!-- <nav>
+		<li><p><a href="#"><span>about me</span></a></p></li>
+		<li><p><a href="#"><span>portfolio</span></a></p></li>
+		<li><p><a href="#"><span>else</span></a></p></li>
+	</nav> -->
+		
+
+
+	<script src="my_script.js"></script>
+</body>
+
+</html>
