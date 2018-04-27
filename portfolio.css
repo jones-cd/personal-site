@@ -56,6 +56,10 @@ h1 {
 	/*display: none;*/
 }
 
+.para1 {
+	display: none;
+}
+
 span {
 	color: #32cd32;
 }
@@ -165,7 +169,7 @@ a > span {
 	color: white;
 	font-weight: 700;
 	line-height: 0.7;
-	padding-top: 8px;
+	padding-top: 14px;
 	padding-bottom: 7px;
 	border-bottom: 6px solid #32cd32;
     width: 31px;
@@ -273,7 +277,8 @@ section {
 	max-width: 220px;
 	position: relative;
 	bottom: 105px;	
-	flex-grow: 2;
+	/*flex-grow: 2;*/
+	margin-top: 0;
 }
 
 .bottom-spacer {
