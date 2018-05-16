@@ -73,6 +73,11 @@ span {
 a {
 	text-decoration: none;
 	font-size: 14px;
+	color: black;
+}
+
+a:hover {
+	color: #32cd32;
 }
 
 li:hover {
@@ -210,7 +215,7 @@ img:hover {
 
 .page-two {
 	background-color: white;
-	padding: 122px 60px 30px 30px;
+	padding: 122px 60px 75px 30px;
 	margin-bottom: 70px;
 	width: 100%;
 }
@@ -309,7 +314,7 @@ section {
 #me {
 	max-width: 220px;
 	position: relative;
-	bottom: 105px;	
+	bottom: 77px;	
 	/*flex-grow: 2;*/
 	margin-top: 0;
 }
@@ -375,7 +380,6 @@ footer {
 footer p {
 	color: black;
 	font-size: 15px;
-    font-weight: 700;
     text-align: right;
     line-height: 30px;
 }
